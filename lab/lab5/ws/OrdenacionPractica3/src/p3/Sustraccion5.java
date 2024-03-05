@@ -24,7 +24,7 @@ public static void main (String arg [])
 	long t1,t2,cont;
 	int nVeces= Integer.parseInt (arg [0]);
 	 
-	for (int n=20;n<=100;n++)
+	for (int n=30;n<=100;n++)
 	{
 		t1 = System.currentTimeMillis ();
 
