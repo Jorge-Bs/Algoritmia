@@ -48,7 +48,7 @@ public class Patron{
 		return resultado[texto.length()-1][patron.length()-1];
 	}
 	
-	private static void ejecutarPrueba(int numeroTest) throws FileNotFoundException,IOException {
+	private static void ejecutarPrueba(int numeroTest) throws IOException {
 		String file = "test"+numeroTest+".txt";
 		List<String> textos = Reader.textos(file);
 		String texto,patron;
