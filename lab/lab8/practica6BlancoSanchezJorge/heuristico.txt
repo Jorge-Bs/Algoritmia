@@ -1,0 +1,9 @@
+Heurísticos sesion 7
+
+Heurístico 1 -> Agrupar por operaciones, el cual para los caso de todo suma se hacen una divison que da 5, la cual es el resultado, cuando son distintos, reducir la operacion por ejemplo, si hay suma suma y resta, plantear
+una especie  de ecuacion de 2*suma + resta, y luego estimar la suma
+
+Heurístico 2-> cada vez que se ponga un valor, calcular el estado de la fila y hallar un porcentaje de como de lejos esta de la solución
+
+Hurístico 3 -> crear combinaciones de filas lugo agrupar dichas combinaciones en funcion de las operaciones y del resultado esperado
+

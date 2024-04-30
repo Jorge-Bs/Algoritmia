@@ -1,0 +1,8 @@
+Heuristico sesion 7
+
+Heuristico 1 -> agrupa por operaciones, el cual para los caso de todo suma se hacen una divison que da 5 q es el resultado
+
+Heuristico 2-> cada vez que se ponga un valor, calcular el estado de la fila y hallar un porcentaje de como de lejos esta de la solucion
+
+Huritico 3 -> crear combinaciones de filas lugo agrupar dichas combinaciones en funcion de las operaciones y del resultado esperado
+

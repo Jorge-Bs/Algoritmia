@@ -2,10 +2,11 @@ package p6;
 
 import java.io.IOException;
 
-public class Cuadrado_Numerico {
+public class Cuadrado_Numerico_Ramifica_Poda {
 
 	public static void main(String[] args) {
-		double[][] values= leerArchivos("test08.txt");
+		double[][] values= leerArchivos("test02.txt");
+		obtenerHeuristico(values,0);
 		//int[][] values = {{6,DIV,EMPTY,3},{SUM,NOT_VALID,SUB,NOT_VALID},{EMPTY,MUL,EMPTY,12},{10,NOT_VALID,-1,NOT_VALID}};
 		t1 = System.currentTimeMillis();
 		operar(values);
@@ -22,11 +23,11 @@ public class Cuadrado_Numerico {
 	static final int SUM=-300;
 	static final int SUB=-400;
 	static final int EMPTY=-600;
-	
+
 	static final int NOT_VALID=-100;
 
 	static final boolean ONE_SOLUTION=true;
-	
+
 	static int soluciones=0;
 
 	private static double[][] leerArchivos(String fileName) {
@@ -50,7 +51,7 @@ public class Cuadrado_Numerico {
 				if(comprobarFilaEntera(valores,siguiente[0])&& comprobarColumnaEntera(valores,siguiente[1])) {
 					operar(valores);
 				}
-				
+
 			}
 			valores[siguiente[0]][siguiente[1]]=EMPTY;
 		}else {
@@ -66,7 +67,7 @@ public class Cuadrado_Numerico {
 			}
 		}
 	}
-	
+
 	private static boolean comprobarColumnaEntera(double[][] valores,int columna) {
 		for(int i=0;i<valores.length-1;i+=2) {
 			if(valores[i][columna]==EMPTY) {
@@ -75,7 +76,7 @@ public class Cuadrado_Numerico {
 		}
 		return comprobarColumna(valores, columna);
 	}
-	
+
 	private static boolean comprobarFilaEntera(double[][] valores,int fila) {
 		for(int i=0;i<valores.length-1;i+=2) {
 			if(valores[fila][i]==EMPTY) {
@@ -183,5 +184,19 @@ public class Cuadrado_Numerico {
 			case NOT_VALID -> " ";
 			default -> throw new IllegalStateException("El caracter solicitado no existe");
 		};
+	}
+
+	private static void obtenerHeuristico(double[][] valores,int fila){
+		double[] row = valores[fila];
+
+		double[] operations = new double[row.length/2-1];
+
+		int paso =0;
+		for(int i=1;i<row.length-1;i+=2){
+			operations[paso] = row[i];
+			paso++;
+		}
+
+		int value =0;
 	}
 }
