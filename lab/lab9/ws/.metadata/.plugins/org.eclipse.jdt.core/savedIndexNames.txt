@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+C:\Users\jorge\OneDrive\Escritorio\uo\2\Algoritmia\lab\lab8\p6\ws\.metadata\.plugins\org.eclipse.jdt.core
+3959137331.index
+1865797976.index
+3432359694.index
